@@ -1,0 +1,12 @@
+x-uffizzi:
+  ingress:
+    service: cube
+    port: 4000c
+
+services:
+  cube:
+    image: ${CUBEJS_IMAGE}
+    ports:
+      - 4000:4000
+    environment:
+      - CUBEJS_DEV_MODE=true
